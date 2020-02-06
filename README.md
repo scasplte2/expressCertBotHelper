@@ -1,4 +1,4 @@
-# Project Title
+# Express Certbot Helper
 
 A simple ExpressJS app that can be used with Let's Encrypt certbot to create and auto-renew certificates.
 
