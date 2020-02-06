@@ -1,0 +1,28 @@
+{
+  "name": "expresscertbothelper",
+  "version": "1.0.0",
+  "description": "A simple express app for creating and auto renewing Let's Encrypt certificates via certbot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Topl/expressCertBotHelper.git"
+  },
+  "keywords": [
+    "express",
+    "certbot"
+  ],
+  "author": "James Aman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Topl/expressCertBotHelper/issues"
+  },
+  "homepage": "https://github.com/Topl/expressCertBotHelper#readme",
+  "dependencies": {
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "node-config": "0.0.2"
+  }
+}
