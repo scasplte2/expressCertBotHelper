@@ -6,8 +6,10 @@ const config = require('config');
 const app = express();
 
 // Check if there are env variables
-const challenge = process.env.CERTBOT_CHALLENGE || config.get("challenge") || "url-string"
-const response = process.env.CERTBOT_CHALLENGE || config.get("response") || "it works!"
+const challenge = config.has("certbot.challenge") ? config.get("certbot.challenge") : "url-string"
+const response = config.has("certbot.response") ? config.get("certbot.response") : "It works!"
+
+console.log(challenge)
 
 // set default port
 PORT = process.env.PORT || 80
