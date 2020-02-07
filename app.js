@@ -5,15 +5,14 @@ const config = require('config');
 // Configure & Run the http server
 const app = express();
 
-console.log(process.env.NODE_ENV)
-console.log(process.env.PORT)
-console.log(process.env.NODE_APP_INSTANCE)
+// Check if there are env variables
+const challenge = process.env.CERTBOT_CHALLENGE || config.get("challenge") || "url-string"
+const response = process.env.CERTBOT_CHALLENGE || config.get("response") || "it works!"
 
 // set default port
 PORT = process.env.PORT || 80
 
-app.get("/.well-known/acme-challenge/" + config.get("challenge"),
-        (req, res) => res.send(config.get("response")));
+app.get("/.well-known/acme-challenge/" + challenge, (req, res) => res.send(response));
 
 app.listen(PORT, () => {
   console.log('certbotHelper - HTTP server running on port ' + PORT);
