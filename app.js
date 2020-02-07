@@ -9,8 +9,6 @@ const app = express();
 const challenge = config.has("certbot.challenge") ? config.get("certbot.challenge") : "url-string"
 const response = config.has("certbot.response") ? config.get("certbot.response") : "It works!"
 
-console.log(challenge)
-
 // set default port
 PORT = process.env.PORT || 80
 
