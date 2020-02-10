@@ -4,7 +4,8 @@
   "description": "A simple express app for creating and auto renewing Let's Encrypt certificates via certbot",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "stop": "pkill --signal SIGINT ecbHelper"
   },
   "repository": {
     "type": "git",
